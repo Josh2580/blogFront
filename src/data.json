@@ -1,0 +1,37 @@
+[
+  {
+    "color": "red",
+    "value": "#f00",
+    "details": "Lorem ipsum   Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam repudiandae deserunt amet libero est consequuntur ex alias, vitae reiciendis reprehenderit odit, expedita, tenetur provident! Ipsam officia fuga libero voluptas voluptatem quisquam voluptate doloremque, nulla praesentium totam dicta modi nam tenetur, quod quam quaerat rem excepturi ab eius deserunt recusandae reiciendis. Quas, inventore quibusdam maiores modi assumenda facere sequi explicabo ab soluta ad rerum quo quod illo voluptate nulla consequatur officiis fugit corporis eaque est. Aperiam quo sapiente nisi numquam repellendus eius sed, saepe dignissimos magnam. Reiciendis vero incidunt labore eos doloribus quam dolorum inventore, non, minus aliquid commodi ducimus! dolor sit amet consectetur adipisicing elit. Laborum quaerat excepturi enim, nisi aperiam facere, officia officiis perspiciatis nostrum rem ipsa non iure asperiores, doloremque voluptatum! Repellendus itaque mollitia necessitatibus!"
+  },
+  {
+    "color": "green",
+    "value": "#0f0",
+    "details": "Lorem   Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam repudiandae deserunt amet libero est consequuntur ex alias, vitae reiciendis reprehenderit odit, expedita, tenetur provident! Ipsam officia fuga libero voluptas voluptatem quisquam voluptate doloremque, nulla praesentium totam dicta modi nam tenetur, quod quam quaerat rem excepturi ab eius deserunt recusandae reiciendis. Quas, inventore quibusdam maiores modi assumenda facere sequi explicabo ab soluta ad rerum quo quod illo voluptate nulla consequatur officiis fugit corporis eaque est. Aperiam quo sapiente nisi numquam repellendus eius sed, saepe dignissimos magnam. Reiciendis vero incidunt labore eos doloribus quam dolorum inventore, non, minus aliquid commodi ducimus!ipsum dolor sit amet consectetur adipisicing elit. Laborum quaerat excepturi enim, nisi aperiam facere, officia officiis perspiciatis nostrum rem ipsa non iure asperiores, doloremque voluptatum! Repellendus itaque mollitia necessitatibus!"
+  },
+  {
+    "color": "blue",
+    "value": "#00f",
+    "details": "Lorem ipsum  Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam repudiandae deserunt amet libero est consequuntur ex alias, vitae reiciendis reprehenderit odit, expedita, tenetur provident! Ipsam officia fuga libero voluptas voluptatem quisquam voluptate doloremque, nulla praesentium totam dicta modi nam tenetur, quod quam quaerat rem excepturi ab eius deserunt recusandae reiciendis. Quas, inventore quibusdam maiores modi assumenda facere sequi explicabo ab soluta ad rerum quo quod illo voluptate nulla consequatur officiis fugit corporis eaque est. Aperiam quo sapiente nisi numquam repellendus eius sed, saepe dignissimos magnam. Reiciendis vero incidunt labore eos doloribus quam dolorum inventore, non, minus aliquid commodi ducimus! dolor sit amet consectetur adipisicing elit. Laborum quaerat excepturi enim, nisi aperiam facere, officia officiis perspiciatis nostrum rem ipsa non iure asperiores, doloremque voluptatum! Repellendus itaque mollitia necessitatibus!"
+  },
+  {
+    "color": "cyan",
+    "value": "#0ff",
+    "details": "Lorem   Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam repudiandae deserunt amet libero est consequuntur ex alias, vitae reiciendis reprehenderit odit, expedita, tenetur provident! Ipsam officia fuga libero voluptas voluptatem quisquam voluptate doloremque, nulla praesentium totam dicta modi nam tenetur, quod quam quaerat rem excepturi ab eius deserunt recusandae reiciendis. Quas, inventore quibusdam maiores modi assumenda facere sequi explicabo ab soluta ad rerum quo quod illo voluptate nulla consequatur officiis fugit corporis eaque est. Aperiam quo sapiente nisi numquam repellendus eius sed, saepe dignissimos magnam. Reiciendis vero incidunt labore eos doloribus quam dolorum inventore, non, minus aliquid commodi ducimus!ipsum dolor sit amet consectetur adipisicing elit. Laborum quaerat excepturi enim, nisi aperiam facere, officia officiis perspiciatis nostrum rem ipsa non iure asperiores, doloremque voluptatum! Repellendus itaque mollitia necessitatibus!"
+  },
+  {
+    "color": "magenta",
+    "value": "#f0f",
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quaerat excepturi enim, nisi aperiam facere, officia officiis perspiciatis nostrum rem ipsa non iure asperiores, doloremque voluptatum! Repellendus itaque mollitia necessitatibus!"
+  },
+  {
+    "color": "yellow",
+    "value": "#ff0",
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quaerat excepturi enim, nisi aperiam facere, officia officiis perspiciatis nostrum rem ipsa non iure asperiores, doloremque voluptatum! Repellendus itaque mollitia necessitatibus!"
+  },
+  {
+    "color": "black",
+    "value": "#000",
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quaerat excepturi enim, nisi aperiam facere, officia officiis perspiciatis nostrum rem ipsa non iure asperiores, doloremque voluptatum! Repellendus itaque mollitia necessitatibus!"
+  }
+]
