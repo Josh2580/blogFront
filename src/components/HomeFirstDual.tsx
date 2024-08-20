@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { FirstCard } from "./FirstCard";
 import { ThirdCard } from "./ThirdCard";
+import { useNavigate } from "react-router-dom";
 
 interface BlogPost {
   id: number;
@@ -11,6 +12,8 @@ interface BlogPost {
 }
 
 export const HomeFirstDual: React.FC = () => {
+  const navigate = useNavigate();
+
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [visibleCount, setVisibleCount] = useState<number>(4);
   const [loading, setLoading] = useState<boolean>(true);
@@ -47,6 +50,7 @@ export const HomeFirstDual: React.FC = () => {
   const handleReadMore = (id: number) => {
     // Implement logic to handle "Read More" button click
     console.log(`Read more about blog ${id}`);
+    navigate(`details/${id}`);
   };
 
   const handleSeeMore = () => {

@@ -4,6 +4,7 @@ import { Carousel } from "../components/Carousel";
 
 import { HomeFirstDual } from "../components/HomeFirstDual";
 import { SecondCard } from "../components/SecondCard";
+// import { useNavigate } from "react-router-dom";
 
 interface BlogPost {
   id: number;
@@ -14,7 +15,7 @@ interface BlogPost {
 
 export const HomePage: React.FC = () => {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
-  const [visibleCount, setVisibleCount] = useState<number>(4);
+  // const [visibleCount, setVisibleCount] = useState<number>(4);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -51,9 +52,9 @@ export const HomePage: React.FC = () => {
     console.log(`Read more about blog ${id}`);
   };
 
-  const handleSeeMore = () => {
-    setVisibleCount((prevCount) => Math.min(prevCount + 4, blogs.length));
-  };
+  // const handleSeeMore = () => {
+  //   setVisibleCount((prevCount) => Math.min(prevCount + 4, blogs.length));
+  // };
 
   if (loading) {
     return <div className="text-center text-gray-500">Loading blogs...</div>;
@@ -63,7 +64,7 @@ export const HomePage: React.FC = () => {
     return <div className="text-center text-red-500">{error}</div>;
   }
 
-  const visibleBlogs = blogs.slice(0, visibleCount);
+  // const visibleBlogs = blogs.slice(0, visibleCount);
 
   return (
     <div className="flex flex-col gap-6">
