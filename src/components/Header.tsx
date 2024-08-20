@@ -3,7 +3,7 @@
 export const Header = () => {
   return (
     <div className="navbar bg-base-300">
-      <div className="navbar-start justify-between  w-full">
+      <div className="navbar-start justify-between gap-20  w-full lg:w-fit">
         <a className="btn btn-primary text-xl">daisyUI</a>
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,8 +46,8 @@ export const Header = () => {
           </ul>
         </div>
       </div>
-      <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-end  w-full hidden lg:flex">
+        <ul className="menu menu-horizontal  px-1">
           <li>
             <a>Item 1</a>
           </li>
@@ -60,6 +60,23 @@ export const Header = () => {
 
           <li>
             <a>Item 4</a>
+          </li>
+          <li>
+            <a>Item 5</a>
+          </li>
+
+          <li>
+            <a>Item 6</a>
+          </li>
+          <li>
+            <a>Item 7</a>
+          </li>
+          <li>
+            <a>Item 8</a>
+          </li>
+
+          <li>
+            <a>Item 9</a>
           </li>
         </ul>
       </div>

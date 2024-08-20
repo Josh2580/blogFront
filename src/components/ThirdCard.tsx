@@ -1,20 +1,29 @@
-export const ThirdCard = () => {
+interface BlogCardProps {
+  image: string;
+  title: string;
+  shortBody: string;
+  onReadMore: () => void;
+}
+
+export const ThirdCard: React.FC<BlogCardProps> = ({
+  image,
+  title,
+  shortBody,
+  onReadMore,
+}) => {
   return (
     <>
-      <div className="flex items-center gap-3 h-20 shadow bg-base-100 w-96 rounded-xl">
-        <div className="avatar">
-          <div className=" rounded-l-xl w-20">
-            <img
-              src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-              alt="Avatar Tailwind CSS Component"
-            />
+      <div className="flex items-center gap-3 h-20 w-full border rounded-lg shadow-sm bg-gray-50">
+        <div className="avatar h-full">
+          <div className=" rounded-l-xl  ">
+            <img src={image} alt={title} className="h-full" />
           </div>
         </div>
         <div>
-          <div className="font-semibold text-gray-600 my-line-clamp-2 ">
-            Hart Hagerty Hart Hagerty Hart Hagerty Hart Hagerty Hart Hagerty{" "}
-            Hart Hagerty Hart Hart HagertyHart Hagerty
-          </div>
+          <div className="font-semibold my-line-clamp-2 ">{shortBody}</div>
+          <button className="hidden" onClick={onReadMore}>
+            Read more
+          </button>
         </div>
       </div>
     </>

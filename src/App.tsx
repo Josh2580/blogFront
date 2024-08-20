@@ -1,7 +1,6 @@
 // import { useState } from "react";
 
-import { SecondCard } from "./components/SecondCard";
-import { ThirdCard } from "./components/ThirdCard";
+// import { ThirdCard } from "./components/ThirdCard";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 import { HomePage } from "./pages/HomePage";
@@ -18,8 +17,8 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <HomePage /> },
           {
-            path: "about",
-            element: <SecondCard />,
+            path: "details:id",
+            element: <DetailsPage />,
           },
           {
             path: "details",
@@ -30,15 +29,15 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/dash",
-    element: <ThirdCard />,
-  },
+  // {
+  //   path: "/dash",
+  //   element: <ThirdCard />,
+  // },
 ]);
 
 function App() {
   return (
-    <div className="bg-slate-100 px-10">
+    <div className="bg-slate-100 md:px-15 sm:px-6 lg:px-20 px-4 ">
       <RouterProvider router={router} />
     </div>
   );
