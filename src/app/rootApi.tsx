@@ -25,9 +25,16 @@ export const rootBlogApi = createApi({
     getBlogById: builder.query<BlogType, string>({
       query: (id) => `posts/${id}`,
     }),
+    getBlogComments: builder.query({
+      query: () => `comments`,
+    }),
   }),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetBlogListQuery, useGetBlogByIdQuery } = rootBlogApi;
+export const {
+  useGetBlogListQuery,
+  useGetBlogByIdQuery,
+  useGetBlogCommentsQuery,
+} = rootBlogApi;
