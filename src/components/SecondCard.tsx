@@ -14,7 +14,7 @@ export const SecondCard: React.FC<BlogCardProps> = ({
   onReadMore,
 }) => {
   return (
-    <div className="card image-full w-full max-w-96 shadow-xl">
+    <div className="card image-full w-full max-w-xl shadow-xl">
       <figure>
         <img src={image} alt={title} />
       </figure>

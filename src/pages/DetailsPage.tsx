@@ -15,7 +15,7 @@ interface BlogPost {
 let image = "https://via.placeholder.com/400x200";
 
 export const DetailsPage: React.FC = () => {
-  const [visibleCount, setVisibleCount] = useState<number>(4);
+  const [visibleCount, setVisibleCount] = useState<number>(3);
   const { data, error, isLoading } = useGetBlogListQuery(undefined);
 
   const handleReadMore = (id: number) => {
@@ -43,7 +43,7 @@ export const DetailsPage: React.FC = () => {
   return (
     <div className="flex flex-col gap-6">
       <DetailsFirstDual />
-      <div className=" grid  lg:grid-cols-4  gap-6">
+      <div className=" grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3  gap-6">
         {visibleBlogs.map((blog: BlogPost) => (
           <SecondCard
             key={blog.id}
