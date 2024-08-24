@@ -3,7 +3,6 @@ import { DetailsSecondDual } from "../components/DetailsSecondDual";
 import { SecondCard } from "../components/SecondCard";
 import { DetailsFirstDual } from "./../components/DetailsFirstDual";
 import { useGetBlogListQuery } from "../app/rootApi";
-import { useParams } from "react-router-dom";
 
 interface BlogPost {
   id: number;
