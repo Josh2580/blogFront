@@ -1,7 +1,7 @@
 // import React from "react";
 
 interface BlogCardProps {
-  image: string;
+  image: string | any;
   title: string;
   shortBody: string;
   onReadMore: () => void;
@@ -13,6 +13,8 @@ export const FirstCard: React.FC<BlogCardProps> = ({
   shortBody,
   onReadMore,
 }) => {
+  // console.log(image);
+
   return (
     <div className="card w-auto max-w-full border rounded-lg shadow-sm bg-gray-50">
       <figure className="max-h-lg">

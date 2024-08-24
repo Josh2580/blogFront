@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useGetBlogListQuery } from "../app/rootApi";
 
 import { CommentForm } from "./CommentForm";
 import { Comments } from "./Comments";
@@ -8,42 +9,13 @@ interface BlogPost {
   id: number;
   title: string;
   body: string;
-  image: string; // URL or path to image
+  // image: string; // URL or path to image
 }
+let image = "https://via.placeholder.com/400x200";
 
 export const DetailsSecondDual: React.FC = () => {
-  const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [visibleCount, setVisibleCount] = useState<number>(6);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/posts"
-        ); // Example API
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        // Assuming the API returns an array of posts; modify as needed
-        const formattedData: BlogPost[] = data.map((post: any) => ({
-          id: post.id,
-          title: post.title,
-          body: post.body.substring(0, 100) + "...", // Shorten the body
-          image: "https://via.placeholder.com/400x200", // Placeholder image
-        }));
-        setBlogs(formattedData);
-      } catch (error) {
-        setError("Failed to fetch blogs");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBlogs();
-  }, []);
+  const { data, error, isLoading } = useGetBlogListQuery(undefined);
 
   const handleReadMore = (id: number) => {
     // Implement logic to handle "Read More" button click
@@ -54,15 +26,18 @@ export const DetailsSecondDual: React.FC = () => {
   //   setVisibleCount((prevCount) => Math.min(prevCount + 4, blogs.length));
   // };
 
-  if (loading) {
+  if (isLoading) {
     return <div className="text-center text-gray-500">Loading blogs...</div>;
   }
 
   if (error) {
-    return <div className="text-center text-red-500">{error}</div>;
+    // Assuming `error.message` is a string. Adjust according to the actual structure.
+    const errorMessage =
+      "error" in error ? error.error : "An unknown error occurred";
+    return <div className="text-center text-red-500">{errorMessage}</div>;
   }
 
-  const visibleBlogs = blogs.slice(0, visibleCount);
+  const visibleBlogs = data.slice(0, visibleCount);
 
   return (
     <div className="flex flex-col lg:flex-row gap-6">
@@ -71,10 +46,10 @@ export const DetailsSecondDual: React.FC = () => {
         <CommentForm />
       </div>
       <div className="lg:w-2/5 xl:w-2/5 h-fit gap-6 sm:w-full  grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 lg:grid-cols-1  w-full  mx-auto bg-white shadow-md rounded-lg p-6">
-        {visibleBlogs.map((blog) => (
+        {visibleBlogs.map((blog: BlogPost) => (
           <ThirdCard
             key={blog.id}
-            image={blog.image}
+            image={image}
             title={blog.title}
             shortBody={blog.body}
             onReadMore={() => handleReadMore(blog.id)}
